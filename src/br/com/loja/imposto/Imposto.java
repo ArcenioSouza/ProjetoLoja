@@ -4,6 +4,6 @@ import br.com.loja.orcamento.Orcamento;
 
 import java.math.BigDecimal;
 
-public interface CalculoDoImposto {
+public interface Imposto {
     public BigDecimal calcular(Orcamento orcamento);
 }
