@@ -6,14 +6,9 @@ import java.math.BigDecimal;
 
 public class CalculadoraDeDesconto {
     public BigDecimal calcular(Orcamento orcamento) {
+        Desconto desconto = new DescontoQtdItensMaiorQueCinco(
+                new DescontoOrcamentoMaiorQueQuinhentos(new SemDesconto()));
 
-        if (orcamento.getQuantidadeItens() > 5) {
-            return orcamento.getValor().multiply(new BigDecimal("0.10"));
-        }
-
-        if(orcamento.getValor().compareTo(new BigDecimal("500")) > 0){
-            return orcamento.getValor().multiply(new BigDecimal("0.10"));
-        }
-        return BigDecimal.ZERO;
+        return desconto.calcular(orcamento);
     }
 }
