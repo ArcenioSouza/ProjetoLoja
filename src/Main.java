@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 
 public class Main {
     public static void main(String[] args) {
-        Orcamento orcamento1 = new Orcamento(new BigDecimal("100"), 4);
+        Orcamento orcamento1 = new Orcamento(new BigDecimal("100"), 6);
         Orcamento orcamento2 = new Orcamento(new BigDecimal("1000"), 1);
 
         CalculadoraDeImposto calculadora = new CalculadoraDeImposto();
